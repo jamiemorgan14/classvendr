@@ -1,12 +1,16 @@
 ﻿using System;
+using classvendr.Models;
 
 namespace classvendr
 {
-    class Program
+  class Program
+  {
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
+      Snack doritos = new Snack("Doritos", 1.25m);
+      System.Console.WriteLine($"{doritos.Name}: {doritos.Price}");
+      doritos.UpdatePrice(1.50m);
+      System.Console.WriteLine($"{doritos.Name}: {doritos.Price}");
     }
+  }
 }
